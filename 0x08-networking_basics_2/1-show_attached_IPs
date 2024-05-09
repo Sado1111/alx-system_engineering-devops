@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Bash script that displays all active IPv4 IPs on the machine it’s executed on.
+
+#This possible by running ifconfig command, grep inet, grep out (avoid) inet6 i.e.
+#IPv6 addresses, we only need IPv4 addresses -
+#so we would get 2nd field of lines with inet for IPv4 addresses
+
+ifconfig | grep 'inet ' | grep -v 'inet 6' |  awk '{print $2}'
