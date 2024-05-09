@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#bash script that configures the /etc/hosts file and sets:
+#localhost IP address to 127.0.0.2 and
+#facebook.com address to 8.8.8.8
+
+#we need to copy /etc/hosts file to get a backup so changes does not 
+#affect actual files until the script with desired changes is created
+#then we would overwrite the backup file with new IP addresses echoed to backup fie
+
+
+cp /etc/hosts ~/hosts_backup
+
+echo "127.0.0.2  localhost" > ~/hosts_backup
+
+echo "8.8.8.8" facebook.com" >> ~/hosts_backup
+
+cp -f ~/hosts_backup /etc/hosts
