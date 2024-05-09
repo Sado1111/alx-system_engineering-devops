@@ -10,8 +10,8 @@
 
 cp /etc/hosts ~/hosts_backup
 
-echo "127.0.0.2  localhost" > ~/hosts_backup
+echo "127.0.0.2                localhost" > ~/hosts_backup
 
-echo "8.8.8.8" facebook.com" >> ~/hosts_backup
+echo "8.8.8.8                  facebook.com" >> ~/hosts_backup
 
 cp -f ~/hosts_backup /etc/hosts
