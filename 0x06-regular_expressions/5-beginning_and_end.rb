@@ -1,8 +1,6 @@
-#!/usr/bin/env ruby
-
+#!/usr/bin/ruby
 # create a Ruby script that accepts one argument and pass it to a regular expression matching method
-# The regular expression must matches a 10 digit phone number
-# The use of quantifiers{} and charater class[0-9]
+# The regex must matches a string that starts with h ends with n and can have any single character in between
+# Introducing the use of . in REGEX
 
-puts ARGV[0].scan(/^[0-9]{10}$/).join
-
+puts ARGV[0].scan(/^h.n$/).join
